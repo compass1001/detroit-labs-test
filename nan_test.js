@@ -43,7 +43,7 @@ function roverMove(location,direction,grid){
         newLocation = [(rover.location[0] + xMove),(rover.location[1] + yMove)];
         
         if(!foundObstacle(newLocation))
-            if(newLocation[0] > rover.grid[0] || newLocation[1] > rover.grid[1])
+            if(newLocation[0] > rover.grid[0] || newLocation[1] > rover.grid[1] || newLocation[0] < 0 || newLocation[1] < 0 )
                 rover.location = switchEdge(newLocation);
             else
                 rover.location = newLocation;
